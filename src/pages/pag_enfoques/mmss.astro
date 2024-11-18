@@ -37,7 +37,7 @@ import clasif from "../../components/css/clasificacion.module.css";
 
     <script>
         // Obtener todos los elementos <details> con el atributo 'data-accordion'
-        const accordions = document.querySelectorAll('[data-accordion]');
+        const accordions = document.querySelectorAll('[data-accordion]') as NodeListOf<HTMLDetailsElement>;
 
         accordions.forEach((accordion) => {
             // Agregar un evento de 'toggle' para cada uno
