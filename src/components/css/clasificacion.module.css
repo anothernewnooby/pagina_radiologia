@@ -1,0 +1,119 @@
+.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90rem;
+    height: 100dvh;
+    margin: 0 auto;
+}
+
+.detalles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 90rem;
+    height: auto;
+    margin: 0 auto;
+}
+
+.sumario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    height: 5rem;
+    background-color: var(--stone800);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    font-family: var(--fuenteTexto);
+    color: var(--rose600);
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-decoration: none; 
+    text-align: left;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.sumario:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.sumario:focus{
+    background-color: var(--rose600);
+    color: var(--stone900);
+    transition: all 0.3s ease-in-out;
+}
+
+.contenedor > h1{
+    font-family: var(--fuenteTitulos);
+    font-size: 4rem;
+    color: var(--rose600);
+    margin-bottom: 2rem;
+}
+
+.lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 35rem; /* Establecemos el ancho fijo aquí */
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.lista > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ahora ocupará el 100% de los 40rem del padre */
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--stone800);
+    border-radius: 0.5rem;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.lista > li > a {
+    display: block;
+    width: 100%; /* Ocupará el 100% del li */
+    height: auto;
+    text-decoration: none;
+    font-family: var(--fuenteTexto);
+    font-size: 2rem;
+    text-align: center;
+    color: var(--stone200);
+}
+
+.lista > li:hover {
+    color: var(--rose600);
+    background-color: var(--stone900);
+    border: 0.1rem solid var(--rose600);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+
+    a{
+        color: var(--rose600);
+    }
+}
+
+.lista > li:focus {
+    color: var(--stone900);
+    background-color: var(--rose600);
+    border: 0.1rem solid var(--stone900);
+    transition: all 0.3s ease-in-out;
+    
+    a{
+        color: var(--rose600);
+    }
+}
