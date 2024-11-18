@@ -90,3 +90,26 @@ h3 {
     margin-bottom: 10rem;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .contenedor {
+    flex-direction: column;
+    height: calc(100dvh - 15rem);
+    padding: 2rem;
+  }
+
+  .contenedor > h2 {
+    font-size: 2rem;
+    margin-top: 10rem;
+  }
+
+  .contenedor > p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .button{
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+  }
+}
