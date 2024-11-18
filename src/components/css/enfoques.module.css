@@ -74,7 +74,6 @@
     border: 0.1rem solid var(--rose600);
     transition: all 0.5s ease-in-out;
 }
-
 .clasificacion {
     display: flex;
     justify-content: center;
@@ -84,11 +83,11 @@
     max-width: 45rem;
   }
   
-  .clasificacion > div {
+  .clasificacion > a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;  
+    flex-direction: row;
     width: 100%;
     max-width: 45rem;
     background-color: var(--stone800);
@@ -96,44 +95,76 @@
     padding: 1rem;
     border: 0.1rem solid var(--stone300);
     border-radius: 1rem;
+    text-decoration: none; 
   }
 
-  .clasificacion > div > h2 {
+  .clasificacion > a > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 45rem;
+  }
+  
+  .clasificacion > a > div > h2 {
     font-family: var(--fuenteTexto);
     font-size: 1.5rem;
     color: var(--stone300);
   }
-
-  .clasificacion > div:hover {
+  
+  .clasificacion > a:hover {
     background-color: var(--stone900);
     border: 0.1rem solid var(--rose600);
     transition: all 0.25s ease-in-out;
     transform: scale(1.01);
-
-    h2{
-        color: var(--rose600);
-    }
-
-    svg path{
-        fill: var(--rose600);
-    }
+    cursor: pointer;
   }
-
-  .clasificacion > div:focus {
+  
+  .clasificacion > a:hover h2 {
+    color: var(--rose600);
+  }
+  
+  .clasificacion > a:hover svg path {
+    fill: var(--rose600);
+  }
+  
+  .clasificacion > a:focus {
     background-color: var(--rose600);
     border: 0.1rem solid var(--rose600);
     transition: all 0.5s ease-in-out;
-
-    h2{
-        color: var(--stone900);
-    }
-
-    svg path{
-        fill: var(--stone900);
-    }
-}
+  }
+  
+  .clasificacion > a:focus h2 {
+    color: var(--stone900);
+  }
+  
+  .clasificacion > a:focus svg path {
+    fill: var(--stone900);
+  }
+  
 
 /* !Media Queries */
+
+@media  screen and (max-width: 1280px) {
+    .contenedor{
+        flex-direction: column;
+        height: 100dvh;
+        padding: 2rem;
+    }
+
+    .contenedor > h1{
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .contenedor > input{
+        width: 100%;
+        max-width: 55rem;
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .contenedor{
@@ -163,6 +194,9 @@
 
 @media screen and (max-width: 420px) {
     .contenedor{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         flex-direction: column;
         height: 100dvh;
         padding: 1rem;
@@ -170,7 +204,7 @@
 
     .titulo > h1{
         font-size: 2.5rem;
-        margin-top: 30rem;
+        margin-top: 3rem;
     }
 
     .contenedor > input{
@@ -180,6 +214,6 @@
 
     .contenedor > button{
         margin-top: 2rem;
-        margin-bottom: 30rem;
+        margin-bottom: 3rem;
     }
 }
