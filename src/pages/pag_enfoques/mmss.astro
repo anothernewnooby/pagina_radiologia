@@ -34,6 +34,23 @@ import clasif from "../../components/css/clasificacion.module.css";
             </div>  
         </details>
     </section>
+
+    <script>
+        // Obtener todos los elementos <details> con el atributo 'data-accordion'
+        const accordions = document.querySelectorAll('[data-accordion]');
+
+        accordions.forEach((accordion) => {
+            // Agregar un evento de 'toggle' para cada uno
+            accordion.addEventListener('toggle', () => {
+                // Cuando un <details> se abre, cerramos los demás
+                accordions.forEach((otherAccordion) => {
+                    if (otherAccordion !== accordion && otherAccordion.open) {
+                        otherAccordion.removeAttribute('open');
+                    }
+                });
+            });
+        });
+    </script>
 </Layout>
 
 
