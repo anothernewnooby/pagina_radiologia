@@ -1,5 +1,6 @@
 :root {
     --stone900: #1c1917;
+    --stone800: #292524;
     --stone200: #e7e5e4;
     --stone300: #d6d3d1;
     --rose600: #2dd4bf;
@@ -21,3 +22,4 @@ html {
 body {
   background-color: var(--stone900);
 }
+
