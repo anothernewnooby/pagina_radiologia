@@ -1,9 +1,9 @@
 :root {
-    --stone900: #1c1917;
-    --stone800: #292524;
-    --stone200: #e7e5e4;
-    --stone300: #d6d3d1;
-    --rose600: #2dd4bf;
+    --negro: #121113;
+    --negro2: #222725;
+    --verde: #899878;
+    --verde2: #e4e6c3;
+    --blanco: #e5e5e5;
     --fuenteTexto: "Outfit", sans-serif;
     --fuenteTitulos: "Radley", serif;
 }
@@ -20,6 +20,6 @@ html {
 }
 
 body {
-  background-color: var(--stone900);
+  background-color: var(--negro);
 }
 
