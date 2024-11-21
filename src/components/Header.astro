@@ -5,12 +5,54 @@ import header from "../components/css/header.module.css";
 <header>
   <section class={header.contenedor}>
     <a href="/">
-      <h1 class={header.active}>Roentgenium</h1>
+      <h1>Roentgenium</h1>
     </a>
+
+    <label class={header.hamburger}>
+      <input type="checkbox" id="menuToggle" />
+      <svg viewBox="0 0 32 32">
+          <path
+          class={`${header.line} ${header['line-top-bottom']}`}
+          d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
+          ></path>
+          <path class={header.line} d="M7 16 27 16"></path>
+      </svg>
+  </label>
+
     <nav class={header.navegacion}>
+      <a href="#">Nosotros</a>
       <a href="/enfoques">Enfoques</a>
       <a href="#">Quiz</a>
       <a href="/contacto">Contacto</a>
     </nav>
   </section>
 </header>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const navegacion = document.querySelector('[class*="navegacion"]');
+    const hamburger = document.querySelector('[class*="hamburger"]');
+
+    if (menuToggle && navegacion) {
+      menuToggle.addEventListener('change', () => {
+        if (menuToggle.checked) {
+          navegacion.setAttribute('data-visible', 'true');
+        } else {
+          navegacion.removeAttribute('data-visible');
+        }
+      });
+
+      // Cerrar menú si se hace clic fuera
+      document.addEventListener('click', (event) => {
+        if (hamburger && navegacion) {
+          if (!hamburger.contains(event.target) && 
+              !navegacion.contains(event.target)) {
+            menuToggle.checked = false;
+            navegacion.removeAttribute('data-visible');
+          }
+        }
+      });
+    }
+  });
+</script>

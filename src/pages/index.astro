@@ -1,7 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import index from "../components/css/index.module.css";
 ---
 
 <Layout title="Roentgenium">
-
+  <section class={index.contenedor}>
+    <section class={index.carta}>
+      <div class={index.cabecera}>
+        <p>18.95</p>
+        <p>111</p>
+      </div>
+      <div class={index.iniciales}>
+        <a href="/enfoque">
+          <h1 class={index.active}>Rg.</h1>
+        </a>
+      </div>
+      <div class={index.footer}>
+        <h2>Roentgenium</h2>
+      </div>
+    </section>
+  </section>
 </Layout>

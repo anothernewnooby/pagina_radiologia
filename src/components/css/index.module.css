@@ -1,0 +1,87 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    padding: 3rem;
+    background-color: var(--negro);
+}
+
+.carta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    height: 100%;
+    max-height: 70rem;
+    background-color: var(--negro2);
+    border: 0.1rem solid var(--verde2);
+    border-radius: 1rem;
+    position: relative;
+    padding: 2rem;
+    position: relative;
+    filter: drop-shadow(0 0 1rem var(--verde2));
+
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.cabecera p {
+    font-family: var(--fuenteTexto);
+    font-size: 3rem;
+    color: var(--verde2);
+    margin: 0;
+}
+
+.iniciales h1 {
+    font-family: var(--fuenteTitulos);
+    font-size: 9rem;
+    color: var(--verde2);
+}
+
+.footer h2{
+    font-family: var(--fuenteTitulos);
+    font-size: 3rem;
+    color: var(--verde2);
+}   
+
+.carta h1, h2, p {
+    filter: drop-shadow(0 0 0.5rem var(--verde2));
+}
+
+.active {
+    animation: flicker2 2.15s ease-out infinite;
+  }
+
+@keyframes flicker2 {
+    0%,
+    3%,
+    6%,
+    9%,
+    12% {
+      color: var(--verde2);
+    }
+    1.5%,
+    4.5%,
+    7.5%,
+    10.5%,
+    13.5% {
+      color: transparent;
+    }
+    15%,
+    93% {
+      color: var(--verde2);
+    }
+    100% {
+      color: var(--verde2);
+    }
+  }

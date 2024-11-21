@@ -4,7 +4,9 @@ header {
   align-items: center;
   width: 100%;
   height: 8rem;
-  background-color: var(--negro);
+  background-color: var(--verde3);
+  position: relative;
+  /* z-index: 100000; */
 }
 
 .contenedor {
@@ -20,7 +22,7 @@ a {
   text-decoration: none;
 }
 
-.contenedor h1 {
+.contenedor  h1 {
   font-family: var(--fuenteTitulos);
   font-size: 3.25rem;
   color: var(--verde2);
@@ -35,7 +37,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 30rem;
+  width: 40rem;
 }
 
 .contenedor > nav > a {
@@ -50,7 +52,121 @@ a {
   filter: drop-shadow(0 0 10px var(--verde2));
 }
 
-/* animación de flicker */
+/* Estilos del botón hamburguesa */
+.hamburger {
+  cursor: pointer;
+  display: none;
+}
+
+.hamburger input {
+  display: none;
+}
+
+.hamburger svg {
+  height: 3em;
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+  fill: none;
+  stroke: var(--verde);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+
+/* !Media Query para versión móvil */
+@media (max-width: 600px) {
+  .contenedor {
+    width: 100%;
+    height: 7rem;
+    padding: 1rem;
+    z-index: 10000;
+  }
+
+  .contenedor h1 {
+    font-size: 4rem;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 100;
+  }
+
+  .hamburger input:checked + svg .line {
+    stroke: var(--verde);
+  }
+
+  .navegacion {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    background-color: var(--verde3);
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateX(100%);
+  }
+
+  .navegacion[data-visible="true"] {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .contenedor > nav {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+    gap: 6rem;
+    margin-top: 8rem;
+    width: 100%;
+  }
+
+  .contenedor > nav > a {
+    display: block;
+    text-align: right;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    opacity: 1; /* Cambiado de 0 a 1 */
+    transform: translateX(0); /* Eliminado el desplazamiento inicial */
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+    padding-bottom: 3rem;
+    border-bottom: 0.1rem solid var(--verde);
+  }
+
+  .navegacion[data-visible="true"] .contenedor > nav > a {
+    color: var(--verde); /* Añadido para asegurar visibilidad */
+    transform: translateX(0); /* Mantener en su posición */
+  }
+}
+
+/* Animaciones de flicker originales */
 @keyframes flicker {
   0% {
     color: var(--verde2);
@@ -69,9 +185,7 @@ a {
   }
 }
 
-/* animación de flicker2 con pausa de 2 segundos */
 @keyframes flicker2 {
-  /* Primer 0.15s: animación de parpadeo */
   0%,
   3%,
   6%,
@@ -86,14 +200,10 @@ a {
   13.5% {
     color: transparent;
   }
-
-  /* Pausa de 2 segundos */
   15%,
   93% {
     color: var(--verde2);
   }
-
-  /* El ciclo termina en 100% */
   100% {
     color: var(--verde2);
   }
