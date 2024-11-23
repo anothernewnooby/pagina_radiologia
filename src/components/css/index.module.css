@@ -6,6 +6,7 @@
     height: calc(100vh - 8rem);
     padding: 3rem;
     background-color: var(--negro);
+    margin-top: 8rem;
 }
 
 .carta {
@@ -141,7 +142,7 @@
   
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 480px) {
     .contenedor {
         display: flex;
         justify-content: center;
@@ -153,6 +154,22 @@
         padding: 3rem;
         padding-bottom: 5rem;
         margin: 0 auto;
-        margin-top: 15rem;
+        margin-top: 9rem;
     }
+
+}
+
+@media screen and (max-width: 1366px) {
+    .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 8rem);
+        padding: 3rem;
+        background-color: var(--negro);
+        margin-top: 30rem;
+    }
+
+  
 }

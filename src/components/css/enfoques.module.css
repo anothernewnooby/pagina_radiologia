@@ -82,6 +82,8 @@
     
 }
 
-@media screen and (max-width: 360px) {
-    
+@media screen and (max-width: 1366px) {
+    .section {
+        margin-top: 5rem;
+    }
 }
