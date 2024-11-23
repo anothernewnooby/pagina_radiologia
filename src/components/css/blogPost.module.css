@@ -15,6 +15,7 @@ h1{
     color: var(--verde2);
     font-size: 4rem;
     text-align: center;
+    font-family: var(--fuenteTitulos);
 }
 
 h2,
@@ -23,6 +24,7 @@ h3 {
   font-size: 3rem;
   margin-bottom: 2rem;
   text-align: left;
+  font-family: var(--fuenteTexto);
 }
 
 p {
@@ -30,11 +32,13 @@ p {
   font-size: 2rem;
   line-height: 1.5;
   margin-bottom: 1.5rem;
+  font-family: var(--fuenteTexto);
 }
 
 ul {
   list-style-type: disc;
   margin-left: 20px;
+  font-family: var(--fuenteTexto);
 }
 
 li {
@@ -42,6 +46,7 @@ li {
   font-size: 2rem;
   color: var(--verde);
   margin-bottom: 2rem;
+  font-family: var(--fuenteTexto);
 }
 
 strong {
