@@ -53,3 +53,10 @@ strong {
   color: #0073e6;
   text-decoration: underline;
 }
+
+
+@media (min-width: 768px) {
+  li, p {
+    font-size: 1.5rem;
+  }
+}
