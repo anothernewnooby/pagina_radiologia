@@ -59,4 +59,10 @@ strong {
   li, p {
     font-size: 1.5rem;
   }
+
+  h1{
+    color: var(--verde2);
+    font-size: 4rem;
+    text-align: center;
+}
 }
