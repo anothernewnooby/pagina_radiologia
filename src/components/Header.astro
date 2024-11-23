@@ -30,29 +30,50 @@ import header from "../components/css/header.module.css";
 
 <script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.getElementById('menuToggle');
-    const navegacion = document.querySelector('[class*="navegacion"]');
-    const hamburger = document.querySelector('[class*="hamburger"]');
+  const menuToggle = document.getElementById('menuToggle');
+  const navegacion = document.querySelector('[class*="navegacion"]');
+  const hamburger = document.querySelector('[class*="hamburger"]');
 
-    if (menuToggle && navegacion) {
-      menuToggle.addEventListener('change', () => {
-        if (menuToggle.checked) {
-          navegacion.setAttribute('data-visible', 'true');
-        } else {
+  if (menuToggle && navegacion) {
+    // Asegurarse de que el menú esté cerrado al cargar la página
+    menuToggle.checked = false;
+    navegacion.removeAttribute('data-visible');
+
+    // Event listener para el toggle
+    menuToggle.addEventListener('change', () => {
+      if (menuToggle.checked) {
+        navegacion.setAttribute('data-visible', 'true');
+      } else {
+        navegacion.removeAttribute('data-visible');
+      }
+    });
+
+    // Cerrar menú si se hace clic fuera
+    document.addEventListener('click', (event) => {
+      if (hamburger && navegacion) {
+        if (!hamburger.contains(event.target) && 
+            !navegacion.contains(event.target)) {
+          menuToggle.checked = false;
           navegacion.removeAttribute('data-visible');
         }
-      });
+      }
+    });
 
-      // Cerrar menú si se hace clic fuera
-      document.addEventListener('click', (event) => {
-        if (hamburger && navegacion) {
-          if (!hamburger.contains(event.target) && 
-              !navegacion.contains(event.target)) {
-            menuToggle.checked = false;
-            navegacion.removeAttribute('data-visible');
-          }
-        }
+    // Cerrar menú cuando se hace clic en un enlace de navegación
+    navegacion.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.checked = false;
+        navegacion.removeAttribute('data-visible');
       });
-    }
-  });
+    });
+
+    // Reiniciar estado del menú cuando la página se vuelve visible
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) {
+        menuToggle.checked = false;
+        navegacion.removeAttribute('data-visible');
+      }
+    });
+  }
+});
 </script>

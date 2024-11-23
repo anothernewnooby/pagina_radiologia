@@ -1,0 +1,27 @@
+---
+import cartaEnf from "../components/css/cartaEnf.module.css";
+
+interface Props {
+  titulo: string;
+  descripcion: string;
+  enlace: string;
+}
+
+const { titulo, descripcion, enlace } = Astro.props;
+---
+
+<section class={cartaEnf.carta}>
+  <h1 class={cartaEnf.titulo}>{titulo}</h1>
+  <div class={cartaEnf.separador}></div>
+  <p>{descripcion}</p>
+  <a href={enlace}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      style="fill: rgba(228, 233, 133, 1);transform: ;msFilter:;"
+      ><path d="M5 12H3v9h9v-2H5zm7-7h7v7h2V3h-9z"></path></svg
+    >
+  </a>
+</section>
