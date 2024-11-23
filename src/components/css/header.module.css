@@ -5,8 +5,10 @@ header {
   width: 100%;
   height: 8rem;
   background-color: var(--verde3);
-  position: relative;
-  /* z-index: 100000; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .contenedor {
@@ -18,41 +20,38 @@ header {
   padding: 2rem;
 }
 
-a {
+.contenedor a {
   text-decoration: none;
 }
 
-.contenedor  h1 {
+.contenedor h1 {
   font-family: var(--fuenteTitulos);
   font-size: 3.25rem;
   color: var(--verde2);
-  margin: 0 auto;
+  margin: 0;
 }
 
-.active {
-  animation: flicker2 2.15s ease-out infinite;
-}
-
-.contenedor > nav {
+.navegacion {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 40rem;
 }
 
-.contenedor > nav > a {
+.navegacion a {
   font-family: var(--fuenteTexto);
   font-size: 2rem;
   color: var(--verde);
+  transition: color 0.3s ease;
 }
 
-.contenedor > nav > a:hover {
+.navegacion a:hover {
   color: var(--verde2);
   animation: flicker 0.15s ease-out forwards;
   filter: drop-shadow(0 0 10px var(--verde2));
 }
 
-/* Estilos del botón hamburguesa */
+/* Hamburger Menu */
 .hamburger {
   cursor: pointer;
   display: none;
@@ -74,7 +73,7 @@ a {
   stroke-linejoin: round;
   stroke-width: 3;
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line-top-bottom {
@@ -90,121 +89,73 @@ a {
   stroke-dashoffset: -32.42;
 }
 
-/* !Media Query para versión móvil */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .contenedor {
-    width: 100%;
-    height: 7rem;
-    padding: 1rem;
-    z-index: 10000;
+    padding: 1rem 2rem;
   }
 
   .contenedor h1 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .hamburger {
     display: block;
-    z-index: 100;
-  }
-
-  .hamburger input:checked + svg .line {
-    stroke: var(--verde);
+    z-index: 1001;
   }
 
   .navegacion {
-    opacity: 0;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: 1rem;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     width: 70%;
     background-color: var(--verde3);
-    padding: 2rem;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 8rem 2rem 2rem;
     transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
   }
 
   .navegacion[data-visible="true"] {
-    opacity: 1;
-    visibility: visible;
     transform: translateX(0);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   }
 
-  .contenedor > nav {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: end;
-    gap: 6rem;
-    margin-top: 8rem;
-    width: 100%;
-  }
-
-  .contenedor > nav > a {
-    display: block;
-    text-align: right;
-    width: 100%;
+  .navegacion a {
     font-size: 2rem;
-    font-weight: 500;
-    opacity: 1; /* Cambiado de 0 a 1 */
-    transform: translateX(0); /* Eliminado el desplazamiento inicial */
-    transition: color 0.3s ease, transform 0.3s ease;
-    z-index: 100;
-    padding-bottom: 3rem;
-    border-bottom: 0.1rem solid var(--verde);
+    padding: 1rem 0;
+    width: 100%;
+    text-align: right;
+    border-bottom: 1px solid var(--verde);
   }
 
-  .navegacion[data-visible="true"] .contenedor > nav > a {
-    color: var(--verde); /* Añadido para asegurar visibilidad */
-    transform: translateX(0); /* Mantener en su posición */
+  .navegacion a:last-child {
+    border-bottom: none;
   }
 }
 
-/* Animaciones de flicker originales */
+@media (max-width: 480px) {
+  .contenedor h1 {
+    font-size: 2.5rem;
+  }
+
+  .navegacion {
+    width: 85%;
+  }
+}
+
 @keyframes flicker {
-  0% {
-    color: var(--verde2);
-  }
-  25% {
-    color: transparent;
-  }
-  50% {
-    color: var(--verde2);
-  }
-  75% {
-    color: transparent;
-  }
-  100% {
-    color: var(--verde2);
-  }
+  0% { color: var(--verde2); }
+  25% { color: transparent; }
+  50% { color: var(--verde2); }
+  75% { color: transparent; }
+  100% { color: var(--verde2); }
 }
 
 @keyframes flicker2 {
-  0%,
-  3%,
-  6%,
-  9%,
-  12% {
-    color: var(--verde2);
-  }
-  1.5%,
-  4.5%,
-  7.5%,
-  10.5%,
-  13.5% {
-    color: transparent;
-  }
-  15%,
-  93% {
-    color: var(--verde2);
-  }
-  100% {
-    color: var(--verde2);
-  }
+  0%, 3%, 6%, 9%, 12% { color: var(--verde2); }
+  1.5%, 4.5%, 7.5%, 10.5%, 13.5% { color: transparent; }
+  15%, 93%, 100% { color: var(--verde2); }
 }
