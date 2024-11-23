@@ -146,6 +146,16 @@ header {
   }
 }
 
+@media screen and (max-width: 376px) {
+  .contenedor h1 {
+    font-size: 2rem;
+  }
+
+  .navegacion {
+    width: 85%;
+  }
+}
+
 @keyframes flicker {
   0% { color: var(--verde2); }
   25% { color: transparent; }
