@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro"
+import md from "../components/css/blogPost.module.css";
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+    <article class={md.article}>
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.tag}</p>
+        <slot />
+    </article>
+</Layout>

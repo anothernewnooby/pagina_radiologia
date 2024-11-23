@@ -88,4 +88,9 @@ article{
     color: var(--negro);
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
 }

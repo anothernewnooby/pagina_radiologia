@@ -1,81 +1,153 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 import menu from "../components/css/menuEnfoques.module.css";
 ---
 
 <Layout title="Miembro Superior">
-    <section class={menu.section}>
-        <div class={menu.titulo}>
-            <h1>Miembro Superior</h1>
-            <p>Enfoques radiologicos de miembro superior</p>
-        </div>
-        <article>
-            <div class={menu.contenedores}>
-                <h2>Mano</h2>
-                <p>Frente de mano PA</p>	
-                <p>Oblicua de mano</p>
-                <h3>Complementarios</h3>
-                <p>Perfil de mano</p>	
-                <p>Metodo de Norgaard</p>
-            </div>
-
-            <div class={menu.contenedores}>
-                <h2>Puño</h2>
-                <p>Frente de puño PA</p>	
-                <p>Perfil de puño</p>
-                <h3>Complementarios</h3>
-                <p>Oblicua de puño</p>
-                <p>Oblicua de puño desviacion medial</p>	
-                <p>Puño desviacion cubital</p>
-                <p>Puño desviacion radial</p>
-                <p>Puño en estres</p>
-                <p>Método de Gaynor Hart</p>
-                <p>Método de Marshall</p>
-            </div>
-
-            <div class={menu.contenedores}>
-                <h2>Antebrazo</h2>
-                <p>Frente de antebrazo AP</p>	
-                <p>Perfil de antebrazo</p>
-            </div>
-
-            <div class={menu.contenedores}>
-                <h2>Codo</h2>
-                <p>Frente de codo AP</p>
-                <p>Perfil de codo</p>
-                <h3>Complementarios</h3>
-                <p>Codo AP flexion parcial</p>	
-                <p>Codo AP oblicua rotacion medial</p>
-                <p>Codo AP oblicua rotacion lateral</p>
-                <p>Método de Jones</p>
-                <p>Método de Coyle</p>
-                <p>Cabeza radial 4 posiciones</p>
-            </div>
-
-            <div class={menu.contenedores}>
-                <h2>Humero</h2>
-                <p>Frente de Humero AP</p>	
-                <p>Perfil de Humero</p>
-                <h3>Complementarios</h3>
-                <p>Lateromedial con rayo horizontal. Traumático</p>
-                <p>Transtoracico lateral. Traumático</p>
-            </div>
-
-            <div class={menu.contenedores}>
-                <h2>Hombro</h2>
-                <p>Frente de hombro AP</p>	
-                <h3>Complementarios</h3>
-                <p>Perfil Escapular</p>
-                <p>Desfiladero, salida del supraespinoso</p>
-                <p>Vuelo de pajaro</p>
-                <p>Método de Stryker</p>
-                <p>Enfoque de Patte</p>
-                <p>Proyección axial de Velpeau</p>
-                <p>Enfoque de Rockwood</p>
-                <p>Corredera bicipital</p>
-                <p>Método de Alexander</p>
-                <p>Apófisis coracoides</p>
-            </div>            
-        </article>
-    </section>
+  <section class={menu.section}>
+    <div class={menu.contenedores}>
+        <h2>Mano</h2>
+        <a href="/post/mano">
+            <p>Frente de mano PA</p>
+        </a>
+        <a href="/post/oblicua-de-mano">
+            <p>Oblicua de mano</p>
+        </a>
+        <h3>Complementarios</h3>
+        <a href="/post/perfil-de-mano">
+            <p>Perfil de mano</p>
+        </a>
+        <a href="/post/metodo-de-norgaard">
+            <p>Método de Norgaard</p>
+        </a>
+    </div>
+    
+    <div class={menu.contenedores}>
+        <h2>Puño</h2>
+        <a href="/post/frente-de-puño-pa">
+            <p>Frente de puño PA</p>
+        </a>
+        <a href="/post/perfil-de-puño">
+            <p>Perfil de puño</p>
+        </a>
+        <h3>Complementarios</h3>
+        <a href="/post/oblicua-de-puño">
+            <p>Oblicua de puño</p>
+        </a>
+        <a href="/post/oblicua-de-puño-desviacion-medial">
+            <p>Oblicua de puño desviación medial</p>
+        </a>
+        <a href="/post/puño-desviacion-cubital">
+            <p>Puño desviación cubital</p>
+        </a>
+        <a href="/post/puño-desviacion-radial">
+            <p>Puño desviación radial</p>
+        </a>
+        <a href="/post/puño-en-estres">
+            <p>Puño en estrés</p>
+        </a>
+        <a href="/post/metodo-de-gaynor-hart">
+            <p>Método de Gaynor Hart</p>
+        </a>
+        <a href="/post/metodo-de-marshall">
+            <p>Método de Marshall</p>
+        </a>
+    </div>
+    
+    <div class={menu.contenedores}>
+        <h2>Antebrazo</h2>
+        <a href="/post/frente-de-antebrazo-ap">
+            <p>Frente de antebrazo AP</p>
+        </a>
+        <a href="/post/perfil-de-antebrazo">
+            <p>Perfil de antebrazo</p>
+        </a>
+    </div>
+    
+    <div class={menu.contenedores}>
+        <h2>Codo</h2>
+        <a href="/post/frente-de-codo-ap">
+            <p>Frente de codo AP</p>
+        </a>
+        <a href="/post/perfil-de-codo">
+            <p>Perfil de codo</p>
+        </a>
+        <h3>Complementarios</h3>
+        <a href="/post/codo-ap-flexion-parcial">
+            <p>Codo AP flexión parcial</p>
+        </a>
+        <a href="/post/codo-ap-oblicua-rotacion-medial">
+            <p>Codo AP oblicua rotación medial</p>
+        </a>
+        <a href="/post/codo-ap-oblicua-rotacion-lateral">
+            <p>Codo AP oblicua rotación lateral</p>
+        </a>
+        <a href="/post/metodo-de-jones">
+            <p>Método de Jones</p>
+        </a>
+        <a href="/post/metodo-de-coyle">
+            <p>Método de Coyle</p>
+        </a>
+        <a href="/post/cabeza-radial-4-posiciones">
+            <p>Cabeza radial 4 posiciones</p>
+        </a>
+    </div>
+    
+    <div class={menu.contenedores}>
+        <h2>Húmero</h2>
+        <a href="/post/frente-de-humero-ap">
+            <p>Frente de Húmero AP</p>
+        </a>
+        <a href="/post/perfil-de-humero">
+            <p>Perfil de Húmero</p>
+        </a>
+        <h3>Complementarios</h3>
+        <a href="/post/lateromedial-rayo-horizontal">
+            <p>Lateromedial con rayo horizontal. Traumático</p>
+        </a>
+        <a href="/post/transtoracico-lateral">
+            <p>Transtorácico lateral. Traumático</p>
+        </a>
+    </div>
+    
+    <div class={menu.contenedores}>
+        <h2>Hombro</h2>
+        <a href="/post/frente-de-hombro-ap">
+            <p>Frente de Hombro AP</p>
+        </a>
+        <h3>Complementarios</h3>
+        <a href="/post/perfil-escapular">
+            <p>Perfil Escapular</p>
+        </a>
+        <a href="/post/desfiladero-salida-supraespinoso">
+            <p>Desfiladero, salida del supraespinoso</p>
+        </a>
+        <a href="/post/vuelo-de-pajaro">
+            <p>Vuelo de pájaro</p>
+        </a>
+        <a href="/post/metodo-de-stryker">
+            <p>Método de Stryker</p>
+        </a>
+        <a href="/post/enfoque-de-patte">
+            <p>Enfoque de Patte</p>
+        </a>
+        <a href="/post/proyeccion-axial-velpeau">
+            <p>Proyección axial de Velpeau</p>
+        </a>
+        <a href="/post/enfoque-de-rockwood">
+            <p>Enfoque de Rockwood</p>
+        </a>
+        <a href="/post/corredera-bicipital">
+            <p>Corredera bicipital</p>
+        </a>
+        <a href="/post/metodo-de-alexander">
+            <p>Método de Alexander</p>
+        </a>
+        <a href="/post/apofisis-coracoides">
+            <p>Apófisis coracoides</p>
+        </a>
+    </div>
+    
+    </article>
+  </section>
 </Layout>
