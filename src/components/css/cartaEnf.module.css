@@ -80,6 +80,15 @@ svg:hover path {
     transition: all 0.3s ease-in-out;
 }
 
+.boton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 100rem;
+    height: auto;
+}
+
 
 /* media query */
 
@@ -90,4 +99,22 @@ svg:hover path {
         
     }
 
+}
+
+@media screen and (max-width: 480px) {
+    svg {
+        margin-left: 20rem;
+        padding: 0.5rem;
+        
+    }
+
+}
+
+@media  screen and (max-width: 360px) {
+    svg {
+        margin-left: 15rem;
+        padding: 0.5rem;
+        
+    }
+    
 }

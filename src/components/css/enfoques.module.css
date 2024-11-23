@@ -15,6 +15,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    max-width: 100rem;
     height: auto;
 }
 
@@ -23,6 +24,8 @@
     font-size: 5rem;
     color: var(--verde2);
 }
+
+
 
 /*! conentenedor cartas */
 
@@ -54,15 +57,31 @@
        margin-top: 15rem;
    }
    
-   
-   
-   
-   
-    .contenedorCartas {
+   .contenedorCartas {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         
     }
+
+    .contTitulo{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenedorCartas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100rem;
+        
+    }
+    
+}
+
+@media screen and (max-width: 360px) {
+    
 }
