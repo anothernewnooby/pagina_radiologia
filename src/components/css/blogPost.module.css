@@ -57,12 +57,6 @@ strong {
 
 @media (max-width: 768px) {
   li, p {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
-
-  h1{
-    color: var(--verde2);
-    font-size: 4rem;
-    text-align: center;
-}
 }
