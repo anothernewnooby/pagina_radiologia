@@ -31,5 +31,5 @@ tags: ['mano']
 <p><strong>Posición</strong>: Las articulaciones metacarpofalángicas (MCF) e interfalángicas (IF) deben estar abiertas, lo que indica que la localización del rayo central es correcta y que la mano está en pronación completa. El eje longitudinal de la mano y la muñeca debe alinearse con el eje del receptor de imagen (RI). Se debe observar ausencia de rotación, lo que se evidencia por la simetría en ambos lados y en las concavidades de los cuerpos de los metacarpos y las falanges de los dedos 2º al 5º. Además, debe haber una cantidad igual de partes blandas a cada lado de las falanges de los dedos 2º al 5º. Los dedos deben estar ligeramente separados, sin superposición de partes blandas.</p>
 <p><strong>Colimación</strong>: La colimación debe ser visible en los cuatro lados. El rayo central y el centro del campo de colimación deben coincidir con la tercera articulación MCF.</p>
 <h2 id="tip-">Tip:</h2>
-<p>Marca de la derecha sobre el <strong>meñique</strong>: mano derecha.
-Marca de la derecha sobre el <strong>pulgar</strong>: mano izquierda.</p>
+<p>Marca de la derecha sobre el <strong>meñique</strong>: mano derecha.</p>
+<p>Marca de la derecha sobre el <strong>pulgar</strong>: mano izquierda.</p>
