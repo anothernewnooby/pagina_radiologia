@@ -25,7 +25,7 @@ tags: ['mano perfil', 'perfil', 'mano']
 <p><strong>Superposición</strong>: Cuando los dedos están extendidos, las falanges pueden superponerse en la imagen.</p>
 <h2 id="rayo-central-">Rayo Central:</h2>
 <p>Perpendicular a la <strong>articulación MCF</strong> del <strong>2do dedo</strong>.</p>
-<h1 id="criterios-radiol-gicos-">Criterios Radiológicos:</h1>
+<h2 id="criterios-radiol-gicos-">Criterios Radiológicos:</h2>
 <p>La imagen debe revelar una proyección lateral de la mano en extensión, utilizada principalmente para localizar cuerpos extraños y evaluar el desplazamiento de fracturas en los metacarpianos.</p>
 <p>Para que la imagen cumpla con los criterios adecuados, debe demostrar lo siguiente:</p>
 <ul>

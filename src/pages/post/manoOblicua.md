@@ -29,7 +29,7 @@ tags: ['mano oblicua', 'oblicua']
 <p><strong>Excepción</strong>: Para obtener una proyección oblicua de la mano, usar un bloque que permita que los dedos queden paralelos al RI. Esto evita el acortamiento de las falanges y la superposición de las articulaciones interfalángicas, manteniendo una visualización clara.</p>
 <h2 id="rayo-central-">Rayo Central:</h2>
 <p>Dirigido de forma <strong>perpendicular</strong> a la <strong>tercera articulación metacarpofalángica</strong>.</p>
-<h1 id="criterios-radiol-gicos-">Criterios Radiológicos:</h1>
+<h2 id="criterios-radiol-gicos-">Criterios Radiológicos:</h2>
 <p><strong>Estructuras mostradas</strong>: Se observa una proyección oblicua que incluye toda la mano y la muñeca, además de aproximadamente 2,4 cm del antebrazo distal.</p>
 <p><strong>Posición:</strong>: Las articulaciones metacarpofalángicas (MCF) e interfalángicas (IF) deben aparecer abiertas, sin acortamiento de las falanges medias o distales, lo que confirma que los dedos están paralelos al receptor de imagen (RI). El eje longitudinal de la mano y la muñeca debe estar correctamente alineado con el RI.</p>
 <p>La posición oblicua de 45° se identifica por las siguientes características: no debe haber superposición en la región media de los metacarpos del 3.º al 5.º. Sin embargo, puede presentarse un leve grado de superposición en las cabezas distales de los metacarpos del 3.º al 5.º, pero no en las regiones distales de los metacarpos 1.º y 2.º. Una superposición excesiva de los metacarpos indica una rotación exagerada (hiperrotación), mientras que una separación excesiva señala una rotación insuficiente (hiporrotación).</p>
