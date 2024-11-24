@@ -1,9 +1,11 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: "Frente de mano PA"
+slug: "frente-de-mano-pa"
 description: "Frente de mano PA"
 pubDate: "2024-03-27"
-tags: ['mano']
+tags: ['mano', 'frente de mano']
+keywords: ["radiografía de mano", "proyección PA", "estudios radiológicos", "frente de mano"]
 ---
 
 <h2 id="dato-cl-nico-">Dato Clínico:</h2>
