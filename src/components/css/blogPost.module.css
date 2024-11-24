@@ -59,6 +59,44 @@ strong {
   text-decoration: underline;
 }
 
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 3rem;
+  border: 0.1rem solid var(--verde2);
+  border-radius: 0.5rem;
+  padding: 1rem;  
+}
+
+button {
+  background: transparent;
+  color: var(--verde2);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--verde2);
+  color: var(--negro);
+  border: none;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+svg {
+  width: 5rem;
+  height: 2rem;
+}
+
+svg:hover {
+  fill: var(--negro);
+  transform: translateX(-1rem);
+  transition: all 0.3s ease;
+}
 
 @media (max-width: 768px) {
   li, p {
