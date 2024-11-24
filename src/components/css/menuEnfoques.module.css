@@ -87,6 +87,7 @@ article{
     background-color: var(--verde2);
     color: var(--negro);
     transform: scale(1.1);
+    /* transform: skew(-5deg); */
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
