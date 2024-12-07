@@ -6,29 +6,43 @@ import styles from "../components/css/index.module.css";
 <Layout title="FocalSpot">
   <div class={styles.heroContainer}>
     <div class={styles.contentSection}>
-        <div class={styles.logoContainer}>
-            <h1 class={styles.logo}>FocalSpot</h1>
-            <p class={styles.tagline}>Juntos creamos conocimiento</p>
-        </div>
+      <div class={styles.logoContainer}>
+        <h1 class={styles.logo}>FocalSpot</h1>
+        <p class={styles.tagline}>Juntos creamos conocimiento</p>
+      </div>
 
-        <div class={styles.searchSection}>
-            <div class={styles.searchContainer}>
-                <svg class={styles.searchIcon} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <input 
-                    type="search" 
-                    class={styles.searchInput} 
-                    placeholder="Explorar enfoques radiológicos..."
-                />
-            </div>
-            <div class={styles.quickLinks}>
-                <a href="/craneo" class={styles.quickLink}>Craneo</a>
-                <a href="/tronco" class={styles.quickLink}>Tronco</a>
-                <a href="/miembro_superior" class={styles.quickLink}>Miembro superior</a>
-                <a href="/miembro_inferior" class={styles.quickLink}>Miembro inferior</a>
-            </div>
+      <div class={styles.searchSection}>
+        <div class={styles.searchContainer}>
+          <svg
+            class={styles.searchIcon}
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input
+            type="search"
+            class={styles.searchInput}
+            placeholder="Explorar enfoques radiológicos..."
+          />
         </div>
+        <div class={styles.quickLinks}>
+          <a href="/craneo" class={styles.quickLink}>Craneo</a>
+          <a href="/tronco" class={styles.quickLink}>Tronco</a>
+          <a href="/miembro_superior" class={styles.quickLink}
+            >Miembro superior</a
+          >
+          <a href="/miembro_inferior" class={styles.quickLink}
+            >Miembro inferior</a
+          >
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 </Layout>

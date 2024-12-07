@@ -31,16 +31,16 @@ const { frontmatter } = Astro.props;
     <slot />
   </article>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const backButton = document.getElementById('back-button');
-  
-  if (backButton) {
-    backButton.addEventListener('click', () => {
-      window.history.back();
+    document.addEventListener("DOMContentLoaded", () => {
+      const backButton = document.getElementById("back-button");
+
+      if (backButton) {
+        backButton.addEventListener("click", () => {
+          window.history.back();
+        });
+      } else {
+        console.error("El botón de regreso no fue encontrado");
+      }
     });
-  } else {
-    console.error('El botón de regreso no fue encontrado');
-  }
-});
   </script>
 </Layout>

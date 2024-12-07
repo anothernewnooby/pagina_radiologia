@@ -11,11 +11,11 @@
   padding: 2rem;
 }
 
-h1{
-    color: var(--verde2);
-    font-size: 4rem;
-    text-align: center;
-    font-family: var(--fuenteTitulos);
+h1 {
+  color: var(--verde2);
+  font-size: 4rem;
+  text-align: center;
+  font-family: var(--fuenteTitulos);
 }
 
 h2,
@@ -55,7 +55,7 @@ strong {
 }
 
 .section-title {
-  color: #0073e6;
+  color: #13e600;
   text-decoration: underline;
 }
 
@@ -67,7 +67,7 @@ strong {
   height: 3rem;
   border: 0.1rem solid var(--verde2);
   border-radius: 0.5rem;
-  padding: 1rem;  
+  padding: 1rem;
 }
 
 button {
@@ -99,7 +99,8 @@ svg:hover {
 }
 
 @media (max-width: 768px) {
-  li, p {
+  li,
+  p {
     font-size: 2rem;
   }
 }

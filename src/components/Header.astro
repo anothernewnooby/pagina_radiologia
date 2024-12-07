@@ -11,11 +11,11 @@ import header from "../components/css/header.module.css";
     <label class={header.hamburger}>
       <input type="checkbox" id="menuToggle" />
       <svg viewBox="0 0 32 32">
-          <path
-          class={`${header.line} ${header['line-top-bottom']}`}
+        <path
+          class={`${header.line} ${header["line-top-bottom"]}`}
           d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"
-          ></path>
-          <path class={header.line} d="M7 16 27 16"></path>
+        ></path>
+        <path class={header.line} d="M7 16 27 16"></path>
       </svg>
     </label>
 
@@ -30,43 +30,49 @@ import header from "../components/css/header.module.css";
 
 <script>
   function initializeNavigation() {
-    const menuToggle = document.getElementById('menuToggle') as HTMLInputElement | null;
-    const navegacion = document.querySelector('[class*="navegacion"]') as HTMLElement | null;
-    const hamburger = document.querySelector('[class*="hamburger"]') as HTMLElement | null;
+    const menuToggle = document.getElementById(
+      "menuToggle"
+    ) as HTMLInputElement | null;
+    const navegacion = document.querySelector(
+      '[class*="navegacion"]'
+    ) as HTMLElement | null;
+    const hamburger = document.querySelector(
+      '[class*="hamburger"]'
+    ) as HTMLElement | null;
 
     if (!menuToggle || !navegacion || !hamburger) return;
 
     // Reset initial state
     menuToggle.checked = false;
-    navegacion.removeAttribute('data-visible');
+    navegacion.removeAttribute("data-visible");
 
     // Toggle menu
-    menuToggle.addEventListener('change', () => {
-      navegacion?.setAttribute('data-visible', menuToggle.checked.toString());
+    menuToggle.addEventListener("change", () => {
+      navegacion?.setAttribute("data-visible", menuToggle.checked.toString());
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', (event: MouseEvent) => {
+    document.addEventListener("click", (event: MouseEvent) => {
       const target = event.target as HTMLElement;
       if (!hamburger.contains(target) && !navegacion.contains(target)) {
         menuToggle.checked = false;
-        navegacion.removeAttribute('data-visible');
+        navegacion.removeAttribute("data-visible");
       }
     });
 
     // Handle navigation links
-    const links = navegacion.querySelectorAll('a');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
+    const links = navegacion.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
         menuToggle.checked = false;
-        navegacion.removeAttribute('data-visible');
+        navegacion.removeAttribute("data-visible");
       });
     });
   }
 
   // Initialize on page load
-  document.addEventListener('DOMContentLoaded', initializeNavigation);
+  document.addEventListener("DOMContentLoaded", initializeNavigation);
 
   // Re-initialize on view transitions
-  document.addEventListener('astro:page-load', initializeNavigation);
+  document.addEventListener("astro:page-load", initializeNavigation);
 </script>

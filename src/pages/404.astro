@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 interface Props {
   title: string;
 }
@@ -8,117 +8,121 @@ const { title } = Astro.props;
 ---
 
 <Layout title="404: Not found">
-    <div class="container">
-        <div class="xray-container">
-          <div class="scan-line"></div>
-          <div class="xray-text">404</div>
-        </div>
-        <h1>Fallo de conexion: PACS</h1>
-        <p>Mmm... parece que perdimos conexión con el PACS.</p>
-        <p>Tranquilos, ya llamamos a servicio tecnico</p>
-        <p>Tiempo de espera: ∞.</p>
-        <a href="/" class="btn">Volver al Inicio</a>
-      </div>
+  <div class="container">
+    <div class="xray-container">
+      <div class="scan-line"></div>
+      <div class="xray-text">404</div>
+    </div>
+    <h1>Fallo de conexion: PACS</h1>
+    <p>Mmm... parece que perdimos conexión con el PACS.</p>
+    <p>Tranquilos, ya llamamos a servicio tecnico</p>
+    <p>Tiempo de espera: ∞.</p>
+    <a href="/" class="btn">Volver al Inicio</a>
+  </div>
 </Layout>
 
 <style>
-    .container {
-      text-align: center;
-      position: relative;
-      padding: 2rem;
-      margin-top: 17rem;
-    }
-  
-    .xray-container {
-      position: relative;
-      width: 30rem;
-      height: 40rem;
-      margin: 0 auto 2rem;
-      border: 2rem solid var(--negro);
-      background: var(--negro2);
-      box-shadow: 0 0 4rem rgba(228, 233, 133, 0.5);
-    }
-  
-    .xray-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 12rem;
-      font-weight: bold;
-      color: var(--blanco);
-      text-shadow: 0 0 20px rgba(228, 233, 133, 0.5);
-    }
-  
-    .scan-line {
-      position: absolute;
+  .container {
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    margin-top: 17rem;
+  }
+
+  .xray-container {
+    position: relative;
+    width: 30rem;
+    height: 40rem;
+    margin: 0 auto 2rem;
+    border: 2rem solid var(--negro);
+    background: var(--negro2);
+    box-shadow: 0 0 4rem rgba(228, 233, 133, 0.5);
+  }
+
+  .xray-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 12rem;
+    font-weight: bold;
+    color: var(--blanco);
+    text-shadow: 0 0 20px rgba(228, 233, 133, 0.5);
+  }
+
+  .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+    background: rgba(228, 233, 133, 0.5);
+    animation: scan 2s linear infinite;
+    box-shadow: 0 0 20px rgba(228, 233, 133, 0.5);
+  }
+
+  @keyframes scan {
+    0% {
       top: 0;
-      left: 0;
-      right: 0;
-      height: 0.5rem;
-      background: rgba(228, 233, 133, 0.5);
-      animation: scan 2s linear infinite;
-      box-shadow: 0 0 20px rgba(228, 233, 133, 0.5);
     }
-  
-    @keyframes scan {
-      0% { top: 0; }
-      100% { top: 100%; }
+    100% {
+      top: 100%;
     }
-  
+  }
+
+  h1 {
+    font-family: var(--fuenteTexto);
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: var(--verde2);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    font-family: var(--fuenteTexto);
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--blanco);
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--verde2);
+    color: var(--negro);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-family: var(--fuenteTexto);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .btn:hover {
+    background: var(--negro);
+    border: 0.1rem solid var(--verde2);
+    transform: scale(1.05);
+    color: var(--verde2);
+  }
+
+  @media (max-width: 768px) {
+    .xray-container {
+      width: 250px;
+      height: 333px;
+    }
+
+    .xray-text {
+      font-size: 90px;
+    }
+
     h1 {
-        font-family: var(--fuenteTexto);
-      font-size: 3rem;
-      margin: 1rem 0;
-      color: var(--verde2);
-      margin-bottom: 2rem;
-    }
-  
-    p {
-        font-family: var(--fuenteTexto);
       font-size: 2rem;
-      margin: 1rem 0;
-      color: var(--blanco);
-      margin-bottom: 2rem;
     }
-  
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: var(--verde2);
-      color: var(--negro);
-      text-decoration: none;
-      border-radius: 0.5rem;
-      font-weight: bold;
-      font-family: var(--fuenteTexto);
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-      margin-top: 1rem;
+
+    p {
+      font-size: 1.6rem;
     }
-  
-    .btn:hover {
-      background: var(--negro);
-      border: 0.1rem solid var(--verde2);
-      transform: scale(1.05);
-      color: var(--verde2);
-    }
-  
-    @media (max-width: 768px) {
-      .xray-container {
-        width: 250px;
-        height: 333px;
-      }
-      
-      .xray-text {
-        font-size: 90px;
-      }
-      
-      h1 {
-        font-size: 2rem;
-      }
-      
-      p {
-        font-size: 1.6rem;
-      }
-    }
-  </style>
+  }
+</style>
